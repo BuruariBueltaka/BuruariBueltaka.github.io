@@ -1,6 +1,6 @@
 # Intereses y reflexiones personales — Luken San Sebastián Alkorta
 
-Sitio estático bilingüe listo para GitHub Pages. Euskara es la lengua principal y castellano ofrece los contenidos que cuentan con traducción. No usa frameworks ni proceso de compilación; la única integración externa de contenido es el reproductor de Spotify declarado en las páginas de música.
+Sitio estático bilingüe listo para GitHub Pages. Euskara es la lengua principal y castellano ofrece los contenidos que cuentan con traducción. No usa frameworks ni proceso de compilación. Las integraciones externas declaradas son el reproductor de Spotify de las páginas de música y Cloudflare Web Analytics.
 
 Sitio público: <https://buruaribueltaka.github.io/>
 
@@ -118,6 +118,15 @@ Para sustituir una fotografía:
 - Con JavaScript se añade la URL exacta del bloque compartido.
 - El control adicional usa Web Share cuando está disponible y, en caso contrario, permite copiar la URL.
 - Todas las páginas enlazan los perfiles públicos [@LukenSanSebasti en X](https://x.com/LukenSanSebasti) y [@luken_san_sebastian en Instagram](https://www.instagram.com/luken_san_sebastian/).
+
+## Analítica
+
+- Cloudflare Web Analytics registra visitas, páginas vistas, rutas, referencias, país, dispositivo, navegador y métricas de rendimiento.
+- El beacon se incluye una sola vez en cada HTML y usa el sitio `buruaribueltaka.github.io`.
+- Cloudflare Web Analytics no instala cookies, no usa almacenamiento local ni crea perfiles individuales.
+- Los datos se consultan en el panel de Cloudflare y pueden tardar varios minutos en aparecer.
+- Los bloqueadores de contenido pueden impedir la medición, por lo que las cifras representan un mínimo observado.
+- Toda página nueva debe incluir el mismo beacon antes de `</body>`; `scripts/validar.mjs` comprueba su presencia, configuración y token.
 
 ## Publicación en GitHub Pages
 
