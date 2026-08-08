@@ -2,7 +2,7 @@
 
 Sitio estático bilingüe listo para GitHub Pages. Euskara es la lengua principal y castellano ofrece el contenido equivalente. No usa frameworks, dependencias externas ni proceso de compilación.
 
-Sitio público: <https://draug35.github.io/luken-san-sebastian-alkorta/>
+Sitio público: <https://buruaribueltaka.github.io/>
 
 ## Estructura
 
@@ -100,11 +100,11 @@ Para sustituir una fotografía:
 - Los enlaces de intención de X funcionan con JavaScript desactivado.
 - Con JavaScript se añade la URL exacta del bloque compartido.
 - El control adicional usa Web Share cuando está disponible y, en caso contrario, permite copiar la URL.
-- Faltan las URL de los perfiles personales de X e Instagram; los puntos exactos están marcados como `PENDIENTE` en el HTML.
+- Todas las páginas enlazan los perfiles públicos [@LukenSanSebasti en X](https://x.com/LukenSanSebasti) y [@luken_san_sebastian en Instagram](https://www.instagram.com/luken_san_sebastian/).
 
 ## Publicación en GitHub Pages
 
-Repositorio: <https://github.com/draug35/luken-san-sebastian-alkorta>.
+Repositorio: <https://github.com/BuruariBueltaka/BuruariBueltaka.github.io>.
 
 La publicación utiliza la rama `main` y la carpeta `/ (root)`. Tras integrar cambios mediante pull request, GitHub Pages vuelve a desplegar automáticamente el sitio.
 
@@ -116,4 +116,4 @@ Comprobación posterior a cada despliegue:
 4. Comprobar las siete fotografías y los enlaces a los originales.
 5. Ejecutar `node scripts/validar.mjs` antes de crear el pull request.
 
-Todas las rutas internas son relativas y funcionan bajo `https://USUARIO.github.io/luken-san-sebastian-alkorta/`.
+Todas las rutas internas son relativas y funcionan desde la raíz `https://buruaribueltaka.github.io/`.
