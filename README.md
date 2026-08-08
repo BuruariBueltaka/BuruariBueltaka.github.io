@@ -1,6 +1,6 @@
 # Intereses y reflexiones personales — Luken San Sebastián Alkorta
 
-Sitio estático bilingüe listo para GitHub Pages. Euskara es la lengua principal y castellano ofrece el contenido equivalente. No usa frameworks, dependencias externas ni proceso de compilación.
+Sitio estático bilingüe listo para GitHub Pages. Euskara es la lengua principal y castellano ofrece los contenidos que cuentan con traducción. No usa frameworks ni proceso de compilación; la única integración externa de contenido es el reproductor de Spotify declarado en las páginas de música.
 
 Sitio público: <https://buruaribueltaka.github.io/>
 
@@ -12,7 +12,10 @@ Sitio público: <https://buruaribueltaka.github.io/>
 ├── README.md
 ├── index.html
 ├── idatziak
-│   └── historiak-ez-du-pilotu-automatikorik
+│   ├── index.html
+│   ├── historiak-ez-du-pilotu-automatikorik
+│   │   └── index.html
+│   └── ispilu-deserosoa
 │       └── index.html
 ├── musika-bila
 │   └── index.html
@@ -21,6 +24,9 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │   ├── en-busca-de-musica
 │   │   └── index.html
 │   └── escritos
+│       ├── index.html
+│       ├── el-espejo-incomodo
+│       │   └── index.html
 │       └── la-historia-no-tiene-piloto-automatico
 │           └── index.html
 ├── scripts
@@ -75,9 +81,20 @@ node scripts/validar.mjs
 - `/` usa `lang="eu"` y es la versión predeterminada.
 - `/es/` usa `lang="es"`.
 - El selector `EU / ES` y todos los enlaces editoriales funcionan sin JavaScript.
-- Los artículos equivalentes se relacionan con `hreflang`.
-- `Musika bila` y `En busca de música` son rutas bilingües equivalentes preparadas para su primer contenido.
-- La fecha de publicación incorporada es el 8 de agosto de 2026.
+- Los artículos equivalentes se relacionan con `hreflang`; un artículo sin traducción no declara una equivalencia inexistente.
+- `/idatziak/` contiene el archivo completo en euskara y `/es/escritos/` solo los textos disponibles en castellano.
+- `Musika bila` y `En busca de música` son rutas bilingües equivalentes e incluyen la misma lista pública de Spotify.
+- La portada muestra únicamente el escrito más reciente. El archivo conserva los demás en orden cronológico inverso.
+- Solo se publica una fecha cuando forma parte de los datos editoriales facilitados.
+
+## Añadir escritos
+
+1. Crear el artículo en `idatziak/<slug>/index.html` y añadirlo a `idatziak/index.html`.
+2. Crear `es/escritos/<slug>/index.html` solo cuando exista una traducción real; añadirla entonces al archivo castellano.
+3. Ordenar cada archivo del texto más reciente al más antiguo, sin inventar fechas ausentes.
+4. Sustituir el destacado de la portada únicamente si el nuevo texto es el más reciente; no duplicar traducciones en una misma portada.
+5. Añadir toda página nueva a la lista `pages` de `scripts/validar.mjs`.
+6. Ejecutar `node scripts/validar.mjs` antes de publicar.
 
 ## Fotografías
 
@@ -111,9 +128,10 @@ La publicación utiliza la rama `main` y la carpeta `/ (root)`. Tras integrar ca
 Comprobación posterior a cada despliegue:
 
 1. Abrir las portadas en euskara y castellano.
-2. Abrir las dos versiones del artículo y sus imágenes editoriales distintas.
-3. Abrir `Musika bila` y `En busca de música`.
-4. Comprobar las siete fotografías y los enlaces a los originales.
-5. Ejecutar `node scripts/validar.mjs` antes de crear el pull request.
+2. Abrir los archivos `Idatziak` y `Escritos`, y comprobar sus enlaces y su orden.
+3. Abrir cada artículo; verificar que solo aparecen los idiomas realmente disponibles.
+4. Abrir `Musika bila` y `En busca de música`, incluido el reproductor y su enlace alternativo.
+5. Comprobar las siete fotografías y los enlaces a los originales.
+6. Ejecutar `node scripts/validar.mjs` antes de crear el pull request.
 
 Todas las rutas internas son relativas y funcionan desde la raíz `https://buruaribueltaka.github.io/`.
