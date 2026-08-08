@@ -4,7 +4,11 @@ import { dirname, extname, resolve } from "node:path";
 const pages = [
   "index.html",
   "es/index.html",
+  "idatziak/index.html",
   "idatziak/historiak-ez-du-pilotu-automatikorik/index.html",
+  "idatziak/ispilu-deserosoa/index.html",
+  "es/escritos/index.html",
+  "es/escritos/el-espejo-incomodo/index.html",
   "es/escritos/la-historia-no-tiene-piloto-automatico/index.html",
   "musika-bila/index.html",
   "es/en-busca-de-musica/index.html"

@@ -5,6 +5,7 @@
   --accent: #8d2d24;
   --focus: #005fcc;
   --rule: #2b2926;
+  --surface: #ebe5da;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
   --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --page-width: 92rem;
@@ -546,6 +547,82 @@ main:focus {
   font-size: 0.82rem;
 }
 
+.writing-archive {
+  padding: clamp(3rem, 7vw, 6.5rem) var(--gutter) clamp(4rem, 8vw, 7rem);
+}
+
+.writing-archive__header {
+  max-width: 72rem;
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  margin-inline: auto;
+  border-bottom: 1px solid var(--rule);
+}
+
+.writing-archive__header h1 {
+  max-width: 16ch;
+  margin: 0;
+  font-size: clamp(2.55rem, 7vw, 5.75rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.writing-list {
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.writing-card {
+  padding-block: clamp(2.25rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--rule);
+}
+
+.writing-card__date {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.writing-card h2 {
+  max-width: 28ch;
+  margin: 0;
+  font-size: clamp(1.65rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.writing-card h2 a {
+  text-decoration: none;
+}
+
+.writing-card h2 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.04em;
+  text-underline-offset: 0.15em;
+}
+
+.writing-card__excerpt {
+  max-width: 58ch;
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.17rem);
+  line-height: 1.6;
+}
+
+.writing-card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--accent);
+}
+
 .article-meta {
   display: flex;
   flex-wrap: wrap;
@@ -584,6 +661,67 @@ main:focus {
 
 .article-body cite {
   font-style: italic;
+}
+
+.article-body h2 {
+  max-width: 24ch;
+  margin: clamp(3.5rem, 8vw, 6rem) 0 1em;
+  font-size: clamp(1.85rem, 4.2vw, 3.15rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.article-body sup {
+  font-family: var(--sans);
+  font-size: 0.68em;
+  line-height: 0;
+}
+
+.article-body [role="doc-noteref"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.article-notes {
+  padding-top: 2rem;
+  margin-top: clamp(3.5rem, 8vw, 6rem);
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.article-notes h2 {
+  margin: 0 0 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.article-notes ol {
+  padding-left: 1.4rem;
+  margin: 0;
+}
+
+.article-notes li {
+  padding-left: 0.35rem;
+}
+
+.footnote-backref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  color: var(--accent);
 }
 
 .pull-quote {
@@ -692,6 +830,23 @@ main:focus {
     grid-column: 4;
     padding-left: 1.2rem;
     border-left: 1px solid var(--rule);
+  }
+
+  .writing-card {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.3fr) minmax(0, 1fr);
+    column-gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .writing-card__date {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  .writing-card h2,
+  .writing-card__excerpt,
+  .writing-card__link {
+    grid-column: 2;
   }
 
   .lead-grid {
