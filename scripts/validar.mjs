@@ -17,6 +17,8 @@ const pages = [
 const root = process.cwd();
 const errors = [];
 const cache = new Map();
+const analyticsToken = "26b025c6de7549498e0cd169049f63c6";
+const analyticsTokens = new Map();
 
 async function load(file) {
   const absolute = resolve(root, file);
@@ -83,6 +85,46 @@ for (const page of pages) {
     }
   }
 
+  const analyticsScripts = [
+    ...html.matchAll(/<script\b[^>]*\bsrc=["']https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js["'][^>]*>\s*<\/script>/gi)
+  ];
+
+  if (analyticsScripts.length !== 1) {
+    errors.push(`${page}: contiene ${analyticsScripts.length} beacons de Cloudflare Web Analytics`);
+  } else {
+    const script = analyticsScripts[0][0];
+    const configMatch = script.match(/\bdata-cf-beacon='([^']+)'/i);
+
+    if (!/\btype=["']module["']/i.test(script)) {
+      errors.push(`${page}: el beacon de Cloudflare no usa type="module"`);
+    }
+
+    if (!configMatch) {
+      errors.push(`${page}: el beacon de Cloudflare no contiene data-cf-beacon`);
+    } else {
+      try {
+        const config = JSON.parse(configMatch[1]);
+
+        if (typeof config.token !== "string" || !/^[a-f0-9]{32}$/i.test(config.token)) {
+          errors.push(`${page}: token de Cloudflare Web Analytics inválido`);
+        } else if (config.token !== analyticsToken) {
+          errors.push(`${page}: el token de Cloudflare no coincide con el sitio configurado`);
+        } else {
+          analyticsTokens.set(page, config.token);
+        }
+      } catch {
+        errors.push(`${page}: data-cf-beacon no contiene JSON válido`);
+      }
+    }
+
+    const scriptPosition = html.indexOf(script);
+    const bodyEndPosition = html.lastIndexOf("</body>");
+
+    if (scriptPosition === -1 || bodyEndPosition === -1 || scriptPosition > bodyEndPosition) {
+      errors.push(`${page}: el beacon de Cloudflare no está antes de </body>`);
+    }
+  }
+
   for (const attribute of html.matchAll(/\b(href|src|srcset)="([^"]+)"/gi)) {
     const references = attribute[1].toLowerCase() === "srcset"
       ? attribute[2].split(",").map((candidate) => candidate.trim().split(/\s+/, 1)[0])
@@ -101,9 +143,13 @@ for (const page of pages) {
   }
 }
 
+if (new Set(analyticsTokens.values()).size > 1) {
+  errors.push("Cloudflare Web Analytics: las páginas no comparten el mismo token");
+}
+
 if (errors.length > 0) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log("OK: estructura, encabezados, alt, IDs y rutas relativas verificados.");
+  console.log(`OK: estructura, accesibilidad, rutas y ${analyticsTokens.size} beacons de Cloudflare verificados.`);
 }
