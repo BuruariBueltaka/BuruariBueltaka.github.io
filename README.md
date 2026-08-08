@@ -1,4 +1,4 @@
-# Archivo personal de Luken San Sebastián Alkorta
+# Intereses y reflexiones personales — Luken San Sebastián Alkorta
 
 Sitio estático bilingüe listo para GitHub Pages. Euskara es la lengua principal y castellano ofrece el contenido equivalente. No usa frameworks, dependencias externas ni proceso de compilación.
 
