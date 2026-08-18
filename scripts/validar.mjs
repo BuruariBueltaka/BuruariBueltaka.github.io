@@ -7,6 +7,7 @@ const pages = [
   "idatziak/index.html",
   "idatziak/historiak-ez-du-pilotu-automatikorik/index.html",
   "idatziak/ispilu-deserosoa/index.html",
+  "idatziak/la-carretera-itxaropenak-zentzu-guztia-galtzen-duenean/index.html",
   "es/escritos/index.html",
   "es/escritos/el-espejo-incomodo/index.html",
   "es/escritos/la-historia-no-tiene-piloto-automatico/index.html",

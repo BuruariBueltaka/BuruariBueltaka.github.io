@@ -15,6 +15,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │   ├── index.html
 │   ├── historiak-ez-du-pilotu-automatikorik
 │   │   └── index.html
+│   ├── la-carretera-itxaropenak-zentzu-guztia-galtzen-duenean
+│   │   └── index.html
 │   └── ispilu-deserosoa
 │       └── index.html
 ├── musika-bila
@@ -38,6 +40,7 @@ Sitio público: <https://buruaribueltaka.github.io/>
     │   └── main.js
     └── images
         ├── articles
+        │   ├── la-carretera.jpg
         │   ├── los-desposeidos-historiak.png
         │   ├── los-desposeidos-historiak.webp
         │   └── los-desposeidos-historia.png

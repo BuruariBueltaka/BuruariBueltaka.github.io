@@ -520,6 +520,10 @@ main:focus {
   line-height: 0.98;
 }
 
+.article-road-title {
+  color: #b87743;
+}
+
 .longform__lede {
   max-width: 55ch;
   margin: clamp(1.8rem, 4vw, 3rem) 0 0;
