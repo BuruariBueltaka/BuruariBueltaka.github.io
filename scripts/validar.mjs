@@ -9,6 +9,7 @@ const pages = [
   "idatziak/ispilu-deserosoa/index.html",
   "idatziak/la-carretera-itxaropenak-zentzu-guztia-galtzen-duenean/index.html",
   "es/escritos/index.html",
+  "es/escritos/llevar-el-fuego-aunque-no-sirva-para-nada/index.html",
   "es/escritos/el-espejo-incomodo/index.html",
   "es/escritos/la-historia-no-tiene-piloto-automatico/index.html",
   "musika-bila/index.html",
