@@ -50,7 +50,7 @@
       hreflang="x-default"
       href="../../../idatziak/historiak-ez-du-pilotu-automatikorik/"
     >
-    <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../../assets/css/styles.css?v=20260819b">
     <script src="../../../assets/js/main.js" defer></script>
   </head>
   <body class="article-page">
@@ -115,14 +115,20 @@
         </header>
 
         <figure class="article-visual" id="imagen-articulo">
-          <img
-            src="../../../assets/images/articles/los-desposeidos-historia.png"
-            alt="Imagen editorial con el título Los desposeídos y el subtítulo La historia no tiene piloto automático; una figura diminuta camina sobre un muro curvo"
-            width="1121"
-            height="1403"
-            decoding="async"
-            fetchpriority="high"
-          >
+          <picture>
+            <source
+              srcset="../../../assets/images/articles/los-desposeidos-historia.webp"
+              type="image/webp"
+            >
+            <img
+              src="../../../assets/images/articles/los-desposeidos-historia.png"
+              alt="Imagen editorial con el título Los desposeídos y el subtítulo La historia no tiene piloto automático; una figura diminuta camina sobre un muro curvo"
+              width="1121"
+              height="1403"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
         </figure>
 
         <div class="article-body">
