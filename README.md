@@ -29,6 +29,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │       ├── index.html
 │       ├── el-espejo-incomodo
 │       │   └── index.html
+│       ├── llevar-el-fuego-aunque-no-sirva-para-nada
+│       │   └── index.html
 │       └── la-historia-no-tiene-piloto-automatico
 │           └── index.html
 ├── scripts
@@ -45,6 +47,7 @@ Sitio público: <https://buruaribueltaka.github.io/>
         │   ├── los-desposeidos-historiak.webp
         │   └── los-desposeidos-historia.png
         ├── foto-01.jpeg
+        ├── foto-destacada-20260819.jpeg
         ├── foto-02.jpeg
         ├── foto-03.jpeg
         ├── foto-04.jpeg
@@ -54,6 +57,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
         └── previews
             ├── foto-01-hero.jpg
             ├── foto-01.jpg
+            ├── foto-destacada-20260819-hero.jpg
+            ├── foto-destacada-20260819.jpg
             ├── foto-02.jpg
             ├── foto-03.jpg
             ├── foto-04.jpg
