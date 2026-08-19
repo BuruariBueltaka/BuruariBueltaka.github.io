@@ -27,6 +27,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │   │   └── index.html
 │   └── escritos
 │       ├── index.html
+│       ├── pedagogias-para-la-derrota
+│       │   └── index.html
 │       ├── el-espejo-incomodo
 │       │   └── index.html
 │       ├── llevar-el-fuego-aunque-no-sirva-para-nada
@@ -45,8 +47,10 @@ Sitio público: <https://buruaribueltaka.github.io/>
         │   ├── la-carretera.jpg
         │   ├── los-desposeidos-historiak.png
         │   ├── los-desposeidos-historiak.webp
-        │   └── los-desposeidos-historia.png
-        ├── foto-01.jpeg
+        │   ├── los-desposeidos-historia.png
+        │   ├── los-desposeidos-historia.webp
+        │   ├── pedagogias-derrota.jpg
+        │   └── pedagogias-derrota.webp
         ├── foto-destacada-20260819.jpeg
         ├── foto-02.jpeg
         ├── foto-03.jpeg
@@ -55,8 +59,6 @@ Sitio público: <https://buruaribueltaka.github.io/>
         ├── foto-06.jpeg
         ├── foto-07.jpeg
         └── previews
-            ├── foto-01-hero.jpg
-            ├── foto-01.jpg
             ├── foto-destacada-20260819-hero.jpg
             ├── foto-destacada-20260819.jpg
             ├── foto-02.jpg
@@ -106,7 +108,7 @@ node scripts/validar.mjs
 
 ## Fotografías
 
-Las siete fotografías originales se conservan como `foto-01.jpeg` a `foto-07.jpeg`. La portada y la galería cargan vistas previas ligeras; al activar una foto se abre el JPEG original a resolución completa.
+Las siete fotografías originales se conservan en `assets/images/`. La destacada usa el nombre `foto-destacada-<AAAAMMDD>.jpeg`, con la fecha de su publicación; las seis restantes, `foto-02.jpeg` a `foto-07.jpeg`. La portada y la galería cargan vistas previas ligeras; al activar una foto se abre el JPEG original a resolución completa.
 
 Las copias publicables incluidas no conservan EXIF, GPS, modelo de cámara ni fecha de captura incrustada. Las fechas y lugares visibles son texto editorial y pueden modificarse en las dos portadas.
 
@@ -114,7 +116,7 @@ Para sustituir una fotografía:
 
 1. Reemplazar el JPEG original conservando su nombre.
 2. Exportar una copia JPEG de hasta 720 px de ancho en `assets/images/previews/` con el mismo número.
-3. Para `foto-01`, exportar además `foto-01-hero.jpg` con un lado máximo de 1600 px.
+3. Para la destacada, exportar además `foto-destacada-<AAAAMMDD>-hero.jpg` con un lado máximo de 1600 px.
 4. Eliminar los metadatos de localización antes de publicar.
 5. Actualizar `alt`, fecha, lugar, `width` y `height` en `index.html` y `es/index.html`.
 
