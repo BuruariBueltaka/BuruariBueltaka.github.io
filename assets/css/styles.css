@@ -236,6 +236,7 @@ main:focus {
 
 .photo-link--lead img {
   aspect-ratio: 4 / 3;
+  object-position: center bottom;
 }
 
 .lead-photo__caption {
