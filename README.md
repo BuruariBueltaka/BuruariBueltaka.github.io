@@ -11,6 +11,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 ├── .gitignore
 ├── README.md
 ├── index.html
+├── irakaslea
+│   └── index.html
 ├── idatziak
 │   ├── index.html
 │   ├── historiak-ez-du-pilotu-automatikorik
@@ -24,6 +26,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 ├── es
 │   ├── index.html
 │   ├── en-busca-de-musica
+│   │   └── index.html
+│   ├── profesor
 │   │   └── index.html
 │   └── escritos
 │       ├── index.html
@@ -94,6 +98,7 @@ node scripts/validar.mjs
 - Los artículos equivalentes se relacionan con `hreflang`; un artículo sin traducción no declara una equivalencia inexistente.
 - `/idatziak/` contiene el archivo completo en euskara y `/es/escritos/` solo los textos disponibles en castellano.
 - `Musika bila` y `En busca de música` son rutas bilingües equivalentes e incluyen la misma lista pública de Spotify.
+- `Irakaslea` y `Profesor` enlazan a los materiales externos de Historia de 2.º de Bachillerato.
 - La portada muestra únicamente el escrito más reciente. El archivo conserva los demás en orden cronológico inverso.
 - Solo se publica una fecha cuando forma parte de los datos editoriales facilitados.
 

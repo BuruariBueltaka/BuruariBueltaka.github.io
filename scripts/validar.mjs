@@ -3,7 +3,9 @@ import { dirname, extname, resolve } from "node:path";
 
 const pages = [
   "index.html",
+  "irakaslea/index.html",
   "es/index.html",
+  "es/profesor/index.html",
   "idatziak/index.html",
   "idatziak/historiak-ez-du-pilotu-automatikorik/index.html",
   "idatziak/ispilu-deserosoa/index.html",
