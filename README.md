@@ -19,6 +19,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │   │   └── index.html
 │   ├── la-carretera-itxaropenak-zentzu-guztia-galtzen-duenean
 │   │   └── index.html
+│   ├── margarita-izan-nahi-dut-edo-gutxienez-deabruaren-sekitokoa
+│   │   └── index.html
 │   └── ispilu-deserosoa
 │       └── index.html
 ├── musika-bila
@@ -37,6 +39,8 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │       │   └── index.html
 │       ├── llevar-el-fuego-aunque-no-sirva-para-nada
 │       │   └── index.html
+│       ├── quiero-ser-margarita-o-por-lo-menos-pertenecer-al-sequito-del-diablo
+│       │   └── index.html
 │       └── la-historia-no-tiene-piloto-automatico
 │           └── index.html
 ├── scripts
@@ -49,6 +53,7 @@ Sitio público: <https://buruaribueltaka.github.io/>
     └── images
         ├── articles
         │   ├── la-carretera.jpg
+        │   ├── el-maestro-y-margarita.jpg
         │   ├── los-desposeidos-historiak.png
         │   ├── los-desposeidos-historiak.webp
         │   ├── los-desposeidos-historia.png

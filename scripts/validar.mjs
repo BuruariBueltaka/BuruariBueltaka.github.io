@@ -10,11 +10,13 @@ const pages = [
   "idatziak/historiak-ez-du-pilotu-automatikorik/index.html",
   "idatziak/ispilu-deserosoa/index.html",
   "idatziak/la-carretera-itxaropenak-zentzu-guztia-galtzen-duenean/index.html",
+  "idatziak/margarita-izan-nahi-dut-edo-gutxienez-deabruaren-sekitokoa/index.html",
   "es/escritos/index.html",
   "es/escritos/pedagogias-para-la-derrota/index.html",
   "es/escritos/llevar-el-fuego-aunque-no-sirva-para-nada/index.html",
   "es/escritos/el-espejo-incomodo/index.html",
   "es/escritos/la-historia-no-tiene-piloto-automatico/index.html",
+  "es/escritos/quiero-ser-margarita-o-por-lo-menos-pertenecer-al-sequito-del-diablo/index.html",
   "musika-bila/index.html",
   "es/en-busca-de-musica/index.html"
 ];
