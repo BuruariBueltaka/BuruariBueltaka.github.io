@@ -33,8 +33,6 @@ Sitio público: <https://buruaribueltaka.github.io/>
 │   │   └── index.html
 │   └── escritos
 │       ├── index.html
-│       ├── la-autoridad-que-se-reclama-ya-se-ha-perdido
-│       │   └── index.html
 │       ├── pedagogias-para-la-derrota
 │       │   └── index.html
 │       ├── el-espejo-incomodo
